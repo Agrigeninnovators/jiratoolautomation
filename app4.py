@@ -213,11 +213,14 @@ def process():
         with open(path, 'r', encoding='utf-8') as f:
             meeting_text = f.read()
 
-        client = OpenAI(
-            api_key=os.environ["MOONSHOT_API_KEY"],
-            base_url="https://api.moonshot.cn/v1",
-            proxies=None
-        )
+        try:
+          client = OpenAI(
+              api_key=os.environ.get("MOONSHOT_API_KEY"),
+              base_url="https://api.moonshot.cn/v1"
+          )
+        except Exception as e:
+          print(f"Failed to initialize OpenAI client: {e}")
+          raise
 
         mom = generate_mom(meeting_text)
         points = extract_relevant_points(mom)
