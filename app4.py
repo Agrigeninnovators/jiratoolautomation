@@ -215,7 +215,7 @@ def process():
 
         client = OpenAI(
             api_key=os.environ["MOONSHOT_API_KEY"],
-            base_url="https://api.moonshot.cn/v1"
+            base_url="https://api.moonshot.cn/v1",
             proxies=None
         )
 
