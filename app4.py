@@ -3,7 +3,7 @@ import os
 import requests
 import re
 from requests.auth import HTTPBasicAuth
-from moonshot import OpenAI
+from openai import OpenAI
 
 app = Flask(__name__)
 UPLOAD_FOLDER = os.path.dirname(__file__)
