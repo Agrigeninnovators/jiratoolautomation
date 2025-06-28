@@ -8,7 +8,7 @@ from openai import OpenAI
 app = Flask(__name__)
 UPLOAD_FOLDER = os.path.dirname(__file__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
+print("KEY:", os.environ["MOONSHOT_API_KEY"])  # Check if it's None
 # === HTML FORM UI ===
 HTML_FORM = '''
 <!DOCTYPE html>
