@@ -6,4 +6,4 @@ services:
     startCommand: python app4.py
     envVars:
       - key: MOONSHOT_API_KEY
-        value: sk-Lers3Q9cEM5RdbTSovjEMUe1K3qM4TOYORzFozm4ElazhKZN
+        sync: false
